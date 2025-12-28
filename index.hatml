@@ -1,0 +1,1160 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#ff4da6" />
+
+  <title>Adriele Makes | Maquiagens com glow e qualidade</title>
+  <meta name="description" content="Adriele Makes: maquiagens selecionadas, kits, novidades e ofertas. Compre pelo WhatsApp com atendimento rápido." />
+  <meta name="robots" content="index,follow" />
+
+  <meta property="og:title" content="Adriele Makes | Maquiagens com glow e qualidade" />
+  <meta property="og:description" content="Kits, novidades e ofertas. Compre pelo WhatsApp com atendimento rápido." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>💄</text></svg>" />
+
+  <style>
+    :root{
+      --bg: #0b0b10;
+      --card: rgba(255,255,255,.06);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.65);
+      --muted2: rgba(255,255,255,.45);
+      --line: rgba(255,255,255,.12);
+      --hot: #ff4da6;
+      --hot2: #ff2d7d;
+      --ok: #33d6a6;
+      --shadow: 0 18px 60px rgba(0,0,0,.45);
+      --radius: 18px;
+    }
+
+    *{ box-sizing: border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color: var(--text);
+      background:
+        radial-gradient(900px 500px at 10% 0%, rgba(255,77,166,.22), transparent 65%),
+        radial-gradient(800px 500px at 85% 10%, rgba(51,214,166,.14), transparent 55%),
+        radial-gradient(900px 600px at 50% 90%, rgba(255,77,166,.12), transparent 60%),
+        var(--bg);
+      line-height: 1.35;
+    }
+
+    a{ color: inherit; text-decoration:none; }
+    a:hover{ opacity:.92; }
+    .container{ width:min(1120px, 92vw); margin:0 auto; }
+
+    .skip{
+      position:absolute; left:-999px; top:-999px;
+      background:#fff; color:#000; padding:10px 14px; border-radius:12px;
+    }
+    .skip:focus{ left:12px; top:12px; z-index:9999; }
+
+    .topbar{
+      position: sticky; top:0; z-index:50;
+      backdrop-filter: blur(14px);
+      background: rgba(11,11,16,.55);
+      border-bottom: 1px solid var(--line);
+    }
+    .topbar__inner{
+      display:flex; align-items:center; gap:18px;
+      padding: 14px 0;
+    }
+    .brand{ display:flex; align-items:center; gap:10px; min-width: 240px; }
+    .brand__logo{
+      width:42px; height:42px; display:grid; place-items:center;
+      background: linear-gradient(135deg, rgba(255,77,166,.35), rgba(51,214,166,.18));
+      border:1px solid var(--line);
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+    }
+    .brand__name{ font-weight: 800; letter-spacing:.2px; }
+    .brand__tag{ font-size: 12px; color: var(--muted); margin-top:2px; }
+
+    .nav{ display:flex; gap:14px; color: var(--muted); }
+    .nav a{ font-size: 14px; padding:10px 10px; border-radius: 12px; }
+    .nav a:hover{ background: rgba(255,255,255,.05); color: var(--text); }
+
+    .actions{ display:flex; gap:10px; margin-left:auto; align-items:center; }
+
+    .btn{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: var(--text);
+      padding: 10px 14px;
+      border-radius: 14px;
+      cursor:pointer;
+      font-weight: 700;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+    }
+    .btn:hover{ background: rgba(255,255,255,.085); }
+    .btn--primary{
+      border-color: rgba(255,77,166,.45);
+      background: linear-gradient(135deg, rgba(255,77,166,.92), rgba(255,45,125,.92));
+      box-shadow: 0 12px 40px rgba(255,45,125,.22);
+    }
+    .btn--primary:hover{ filter: brightness(1.03); }
+    .btn--ghost{ background: rgba(255,255,255,.04); }
+    .btn--full{ width:100%; }
+
+    .badge{
+      background: rgba(255,255,255,.14);
+      border:1px solid var(--line);
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+    }
+
+    .hide-sm{ display:inline; }
+    @media (max-width: 860px){
+      .nav{ display:none; }
+      .brand{ min-width: unset; }
+      .hide-sm{ display:none; }
+    }
+
+    .hero{ padding: 34px 0 22px; }
+    .hero__grid{
+      display:grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+    .hero h1{
+      font-size: clamp(30px, 3.7vw, 48px);
+      margin: 12px 0 10px;
+      line-height: 1.05;
+    }
+    .lead{ color: var(--muted); font-size: 16px; max-width: 54ch; }
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border:1px solid rgba(255,77,166,.35);
+      background: rgba(255,77,166,.08);
+      color: rgba(255,255,255,.86);
+      font-weight: 700;
+      font-size: 13px;
+    }
+    .hero__cta{ display:flex; gap:10px; margin: 18px 0 14px; flex-wrap: wrap; }
+
+    .trust{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .trust__item{
+      display:flex; gap:10px; align-items:flex-start;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      padding: 12px;
+      border-radius: 16px;
+    }
+    .trust__icon{ font-size: 18px; }
+    .fineprint{ color: var(--muted2); font-size: 12px; margin: 10px 0 0; }
+
+    .card{
+      border:1px solid var(--line);
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .card.big{ overflow:hidden; display:flex; flex-direction:column; }
+    .big__media{
+      position: relative;
+      padding: 18px;
+      min-height: 230px;
+      background:
+        radial-gradient(500px 260px at 30% 20%, rgba(255,77,166,.35), transparent 60%),
+        radial-gradient(420px 260px at 70% 40%, rgba(51,214,166,.22), transparent 60%),
+        rgba(255,255,255,.03);
+      border-bottom: 1px solid var(--line);
+    }
+    .big__badge{
+      position:absolute; top:14px; left:14px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(0,0,0,.35);
+      border: 1px solid var(--line);
+      color: rgba(255,255,255,.88);
+      font-weight: 800;
+      font-size: 12px;
+    }
+    .blob{
+      position:absolute; inset:auto;
+      filter: blur(22px);
+      opacity: .85;
+      border-radius: 999px;
+    }
+    .blob--1{ width:180px; height:180px; top:50px; left:35px; background: rgba(255,77,166,.55); }
+    .blob--2{ width:220px; height:220px; top:30px; right:20px; background: rgba(51,214,166,.35); }
+
+    .big__mock{
+      position: relative;
+      width: 100%;
+      max-width: 440px;
+      margin: 34px auto 14px;
+      border-radius: 22px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(0,0,0,.26);
+      overflow:hidden;
+    }
+    .mock__top{ height: 42px; border-bottom:1px solid rgba(255,255,255,.12); background: rgba(255,255,255,.04); }
+    .mock__mid{
+      display:flex; gap: 12px; padding: 14px;
+      border-bottom: 1px solid rgba(255,255,255,.12);
+    }
+    .mock__circle{
+      width: 44px; height:44px; border-radius: 16px;
+      background: rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.12);
+    }
+    .mock__lines{ flex:1; display:flex; flex-direction:column; gap:8px; }
+    .line{
+      height: 10px; border-radius: 999px;
+      background: rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.10);
+    }
+    .w80{ width:80%; }
+    .w60{ width:60%; }
+    .w90{ width:90%; }
+    .mock__grid{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 10px;
+      padding: 14px;
+    }
+    .mock__tile{
+      height: 66px; border-radius: 18px;
+      background: rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.10);
+    }
+
+    .big__content{ padding: 14px 16px 16px; }
+    .big__content h3{ margin: 2px 0 6px; }
+    .muted{ color: var(--muted); }
+    .small{ font-size: 12px; }
+
+    .priceRow{
+      display:flex; align-items:center; justify-content: space-between;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .price{ font-size: 20px; font-weight: 900; }
+    .priceOld{ font-size: 12px; color: var(--muted2); text-decoration: line-through; }
+
+    .miniTrust{
+      display:flex; flex-wrap:wrap; gap:10px;
+      margin-top: 12px;
+      color: rgba(255,255,255,.78);
+      font-size: 12px;
+    }
+
+    .strip{
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+    }
+    .strip__inner{
+      display:flex; align-items:center; justify-content:space-between;
+      gap: 12px;
+      padding: 12px 0;
+      color: rgba(255,255,255,.78);
+      font-size: 13px;
+    }
+    .strip__right{ display:flex; gap: 10px; align-items:center; color: var(--muted); }
+    .dot{
+      width:6px; height:6px; border-radius: 99px;
+      background: rgba(255,77,166,.9);
+      display:inline-block;
+    }
+    @media (max-width: 860px){
+      .hero__grid{ grid-template-columns: 1fr; }
+      .trust{ grid-template-columns: 1fr; }
+      .strip__inner{ flex-direction: column; align-items:flex-start; }
+    }
+
+    .section{ padding: 34px 0; }
+    .section.alt{
+      background: rgba(255,255,255,.02);
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+    .section__head{
+      display:flex; align-items:flex-end; justify-content:space-between;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+    .section__head h2{ margin:0; font-size: 26px; }
+    .filters{
+      display:flex; gap:10px; flex-wrap:wrap;
+      align-items:center;
+    }
+    .input{
+      border:1px solid var(--line);
+      background: rgba(0,0,0,.22);
+      color: var(--text);
+      padding: 10px 12px;
+      border-radius: 14px;
+      outline:none;
+      min-width: 180px;
+    }
+    .input::placeholder{ color: rgba(255,255,255,.45); }
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      gap: 12px;
+    }
+    .grid--3{ grid-template-columns: repeat(3, minmax(0,1fr)); }
+    .grid--2{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+
+    @media (max-width: 980px){
+      .grid{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .grid--3{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+    }
+    @media (max-width: 520px){
+      .grid{ grid-template-columns: 1fr; }
+      .grid--2{ grid-template-columns: 1fr; }
+    }
+
+    .product{
+      padding: 14px;
+      display:flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .product__top{
+      display:flex; align-items:flex-start; justify-content:space-between; gap:10px;
+    }
+    .product__title{
+      font-weight: 900;
+      margin:0;
+    }
+    .tag{
+      font-size: 11px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      border:1px solid rgba(255,255,255,.16);
+      color: rgba(255,255,255,.78);
+      background: rgba(255,255,255,.04);
+    }
+    .tag.hot{
+      border-color: rgba(255,77,166,.45);
+      background: rgba(255,77,166,.10);
+    }
+    .product__desc{ color: var(--muted); margin:0; }
+    .product__bottom{
+      display:flex; align-items:center; justify-content:space-between;
+      gap: 10px;
+      margin-top: 4px;
+    }
+    .product__price .price{ font-size: 18px; }
+    .product__price .priceOld{ font-size: 11px; }
+
+    .note{
+      margin-top: 14px;
+      padding: 12px 14px;
+      border-radius: 16px;
+      border:1px solid rgba(51,214,166,.28);
+      background: rgba(51,214,166,.06);
+    }
+
+    .kit{ padding: 16px; display:flex; flex-direction: column; gap: 8px; }
+    .kit__icon{ font-size: 26px; }
+    .kit__price{ display:flex; align-items:baseline; gap:10px; margin-top: 4px; }
+
+    .testi{ padding: 16px; }
+    .stars{ letter-spacing: 2px; color: rgba(255,255,255,.86); margin-bottom: 8px; }
+
+    .faq{ display:flex; flex-direction: column; gap: 10px; }
+    details.card{ padding: 12px 14px; }
+    summary{
+      cursor:pointer;
+      font-weight: 900;
+      list-style:none;
+    }
+    summary::-webkit-details-marker{ display:none; }
+    .faq__content{ color: var(--muted); margin-top: 10px; }
+
+    .policy{ padding: 16px; }
+    .list{ margin: 8px 0 0; color: var(--muted); }
+    .list li{ margin: 6px 0; }
+
+    .disclaimer{
+      margin-top: 14px;
+      padding: 12px 14px;
+      border-radius: 16px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.18);
+    }
+
+    .footer{
+      padding: 18px 0;
+      border-top:1px solid var(--line);
+      background: rgba(0,0,0,.15);
+    }
+    .footer__inner{
+      display:flex; align-items:center; justify-content:space-between;
+      gap: 12px;
+    }
+    .footer__links{ display:flex; gap: 12px; color: var(--muted); font-size: 13px; }
+    .footer__links a:hover{ color: var(--text); }
+
+    .fab{
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      width: 56px; height:56px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.16);
+      background: linear-gradient(135deg, rgba(51,214,166,.92), rgba(255,77,166,.78));
+      box-shadow: 0 18px 60px rgba(0,0,0,.55);
+      cursor:pointer;
+      font-size: 20px;
+    }
+
+    .backdrop{
+      position: fixed; inset:0;
+      background: rgba(0,0,0,.55);
+      backdrop-filter: blur(4px);
+      z-index: 90;
+    }
+    .drawer{
+      position: fixed;
+      right: 0; top: 0;
+      height: 100dvh;
+      width: min(420px, 92vw);
+      background: rgba(12,12,18,.92);
+      border-left:1px solid var(--line);
+      z-index: 100;
+      display:flex;
+      flex-direction: column;
+      box-shadow: var(--shadow);
+    }
+    .drawer__head{
+      padding: 14px 14px;
+      border-bottom:1px solid var(--line);
+      display:flex; align-items:center; justify-content:space-between;
+      gap: 10px;
+    }
+    .drawer__head h3{ margin:0; }
+    .iconBtn{
+      width: 40px; height:40px;
+      border-radius: 14px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      cursor:pointer;
+      color: var(--text);
+    }
+    .drawer__content{
+      padding: 12px 14px;
+      overflow:auto;
+      flex: 1;
+      display:flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .drawer__foot{
+      padding: 12px 14px 14px;
+      border-top:1px solid var(--line);
+      display:flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .cartItem{
+      display:flex; gap: 10px; align-items:flex-start;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      border-radius: 16px;
+      padding: 10px;
+    }
+    .cartItem__icon{
+      width: 44px; height:44px; border-radius: 16px;
+      display:grid; place-items:center;
+      background: rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.10);
+      flex: 0 0 auto;
+    }
+    .cartItem__body{ flex:1; }
+    .cartItem__title{ font-weight: 900; margin: 0 0 2px; }
+    .cartItem__meta{ color: var(--muted); font-size: 12px; }
+    .qty{
+      display:flex; align-items:center; gap: 6px; margin-top: 8px;
+    }
+    .qty button{
+      width: 34px; height:34px;
+      border-radius: 14px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: var(--text);
+      cursor:pointer;
+    }
+    .qty span{ min-width: 24px; text-align:center; font-weight: 900; }
+
+    .totals{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      border-radius: 16px;
+      padding: 10px 12px;
+    }
+    .totals__row{ display:flex; align-items:center; justify-content:space-between; gap:10px; }
+  </style>
+</head>
+
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <div class="brand">
+        <div class="brand__logo" aria-hidden="true">💄</div>
+        <div class="brand__text">
+          <div class="brand__name">Adriele Makes</div>
+          <div class="brand__tag">Glow, autoestima e entrega rápida</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="#produtos">Produtos</a>
+        <a href="#kits">Kits</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#faq">FAQ</a>
+        <a href="#politicas">Políticas</a>
+      </nav>
+
+      <div class="actions">
+        <button class="btn btn--ghost" id="btnOpenCart" aria-haspopup="dialog" aria-controls="cartDrawer">
+          🛒 <span class="hide-sm">Carrinho</span>
+          <span class="badge" id="cartCount">0</span>
+        </button>
+        <a class="btn btn--primary" href="#produtos">Ver ofertas</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__left">
+          <p class="pill">✨ Promo da semana: brindes em compras acima de R$ 149</p>
+          <h1>Maquiagem que valoriza você — sem complicação.</h1>
+          <p class="lead">
+            Selecionamos produtos queridinhos e kits prontos para você arrasar. Compra rápida pelo WhatsApp e suporte humano.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#produtos">Comprar agora</a>
+            <button class="btn btn--ghost" id="btnTalk">Falar com atendente</button>
+          </div>
+
+          <div class="trust">
+            <div class="trust__item">
+              <div class="trust__icon">🚚</div>
+              <div>
+                <strong>Envio rápido</strong>
+                <div class="muted">Postagem em até 24–48h úteis*</div>
+              </div>
+            </div>
+            <div class="trust__item">
+              <div class="trust__icon">🧾</div>
+              <div>
+                <strong>Compra segura</strong>
+                <div class="muted">Atendimento e comprovante</div>
+              </div>
+            </div>
+            <div class="trust__item">
+              <div class="trust__icon">💬</div>
+              <div>
+                <strong>Suporte real</strong>
+                <div class="muted">Tira dúvidas pelo WhatsApp</div>
+              </div>
+            </div>
+          </div>
+
+          <p class="fineprint">*Prazos podem variar por região. Consulte no checkout.</p>
+        </div>
+
+        <div class="hero__right">
+          <div class="card big">
+            <div class="big__media" role="img" aria-label="Imagem ilustrativa de maquiagem">
+              <div class="blob blob--1"></div>
+              <div class="blob blob--2"></div>
+              <div class="big__badge">Novidades ✨</div>
+
+              <div class="big__mock">
+                <div class="mock__top"></div>
+                <div class="mock__mid">
+                  <div class="mock__circle"></div>
+                  <div class="mock__lines">
+                    <div class="line w80"></div>
+                    <div class="line w60"></div>
+                    <div class="line w90"></div>
+                  </div>
+                </div>
+                <div class="mock__grid">
+                  <div class="mock__tile"></div>
+                  <div class="mock__tile"></div>
+                  <div class="mock__tile"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="big__content">
+              <h3>Kit Glow Completo</h3>
+              <p class="muted">Base + corretivo + blush + gloss. Ideal para o dia a dia.</p>
+
+              <div class="priceRow">
+                <div>
+                  <div class="priceOld">R$ 199,90</div>
+                  <div class="price">R$ 149,90</div>
+                </div>
+                <button class="btn btn--primary" data-add="kit-glow">Adicionar 🛒</button>
+              </div>
+
+              <div class="miniTrust">
+                <span>⭐ 4,9/5</span>
+                <span>✅ Testado e aprovado</span>
+                <span>🎁 Brinde</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="strip">
+      <div class="container strip__inner">
+        <div class="strip__left">
+          <strong>Frete & Entrega:</strong>
+          <span class="muted">Consulte valores e prazo no WhatsApp no momento do pedido.</span>
+        </div>
+        <div class="strip__right">
+          <span class="dot"></span> Atendimento rápido
+          <span class="dot"></span> Kits prontos
+          <span class="dot"></span> Promoções
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="produtos">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2>Produtos em destaque</h2>
+            <p class="muted">Escolha seus favoritos e finalize pelo WhatsApp.</p>
+          </div>
+
+          <div class="filters">
+            <input id="search" class="input" type="search" placeholder="Buscar (ex: base, gloss, blush)..." />
+            <select id="category" class="input">
+              <option value="all">Todas categorias</option>
+              <option value="pele">Pele</option>
+              <option value="olhos">Olhos</option>
+              <option value="boca">Boca</option>
+              <option value="acessorios">Acessórios</option>
+              <option value="kits">Kits</option>
+            </select>
+            <select id="sort" class="input">
+              <option value="featured">Ordenar: destaque</option>
+              <option value="low">Menor preço</option>
+              <option value="high">Maior preço</option>
+              <option value="name">Nome (A–Z)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid" id="productGrid" aria-live="polite"></div>
+
+        <div class="note">
+          <strong>Dica:</strong> quer trocar algum item do kit? Chama no WhatsApp e montamos personalizado.
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="kits">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2>Kits prontos (economize mais)</h2>
+            <p class="muted">Para presentear ou garantir o look completo.</p>
+          </div>
+          <a class="btn btn--ghost" href="#produtos">Ver tudo</a>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="card kit">
+            <div class="kit__icon">✨</div>
+            <h3>Kit Glow</h3>
+            <p class="muted">Pele leve + brilho na medida.</p>
+            <div class="kit__price">
+              <span class="price">R$ 149,90</span>
+              <span class="priceOld">R$ 199,90</span>
+            </div>
+            <button class="btn btn--primary" data-add="kit-glow">Adicionar 🛒</button>
+          </article>
+
+          <article class="card kit">
+            <div class="kit__icon">👁️</div>
+            <h3>Kit Olhar Marcante</h3>
+            <p class="muted">Máscara + delineador + sombra.</p>
+            <div class="kit__price">
+              <span class="price">R$ 119,90</span>
+              <span class="priceOld">R$ 159,90</span>
+            </div>
+            <button class="btn btn--primary" data-add="kit-olhar">Adicionar 🛒</button>
+          </article>
+
+          <article class="card kit">
+            <div class="kit__icon">💋</div>
+            <h3>Kit Boca Perfeita</h3>
+            <p class="muted">Gloss + batom + lápis contorno.</p>
+            <div class="kit__price">
+              <span class="price">R$ 89,90</span>
+              <span class="priceOld">R$ 119,90</span>
+            </div>
+            <button class="btn btn--primary" data-add="kit-boca">Adicionar 🛒</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="depoimentos">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2>Quem compra, volta 💖</h2>
+            <p class="muted">Depoimentos reais (exemplos — substitua pelos seus).</p>
+          </div>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="card testi">
+            <div class="stars">★★★★★</div>
+            <p>“Chegou rápido e a base ficou perfeita na minha pele! Atendimento ótimo.”</p>
+            <div class="muted"><strong>Camila</strong> • Compra verificada</div>
+          </article>
+
+          <article class="card testi">
+            <div class="stars">★★★★★</div>
+            <p>“Kit boca perfeita é muito bom. Gloss maravilhoso e não gruda!”</p>
+            <div class="muted"><strong>Jéssica</strong> • Compra verificada</div>
+          </article>
+
+          <article class="card testi">
+            <div class="stars">★★★★★</div>
+            <p>“Amei! Tiraram minhas dúvidas e me ajudaram a escolher a cor certinha.”</p>
+            <div class="muted"><strong>Rafaela</strong> • Compra verificada</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="faq">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2>Perguntas frequentes</h2>
+            <p class="muted">Respostas rápidas pra você comprar com segurança.</p>
+          </div>
+        </div>
+
+        <div class="faq">
+          <details class="card">
+            <summary>Como funciona a compra?</summary>
+            <div class="faq__content">
+              Você adiciona os itens no carrinho e finaliza pelo WhatsApp. Enviamos o resumo do pedido, valor total e opções de entrega.
+            </div>
+          </details>
+
+          <details class="card">
+            <summary>Quais formas de pagamento?</summary>
+            <div class="faq__content">
+              Pix e transferência (adicione outras se tiver). Após confirmação, preparamos e enviamos.
+            </div>
+          </details>
+
+          <details class="card">
+            <summary>Quanto tempo leva para chegar?</summary>
+            <div class="faq__content">
+              Depende da sua região. Informamos o prazo no WhatsApp antes de fechar o pedido.
+            </div>
+          </details>
+
+          <details class="card">
+            <summary>Posso trocar/devolver?</summary>
+            <div class="faq__content">
+              Sim. Consulte nossa política de trocas e devoluções abaixo.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="politicas">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2>Políticas e contato</h2>
+            <p class="muted">Isso ajuda MUITO na aprovação do domínio/anúncios.</p>
+          </div>
+        </div>
+
+        <div class="grid grid--2">
+          <article class="card policy">
+            <h3>Contato</h3>
+            <p><strong>Adriele Makes</strong></p>
+            <p class="muted">
+              Atendimento via WhatsApp: <span id="phoneText">(carregando...)</span><br />
+              Horário: Seg–Sáb • 09h–18h
+            </p>
+            <button class="btn btn--primary" id="btnTalk2">Chamar no WhatsApp</button>
+          </article>
+
+          <article class="card policy">
+            <h3>Política de privacidade (resumo)</h3>
+            <p class="muted">
+              Usamos seus dados apenas para atendimento e entrega do pedido. Não vendemos suas informações.
+              Você pode solicitar remoção/alteração pelo WhatsApp.
+            </p>
+            <p class="muted">
+              <strong>Cookies:</strong> usamos armazenamento local para manter seu carrinho.
+            </p>
+          </article>
+
+          <article class="card policy">
+            <h3>Entrega</h3>
+            <ul class="list">
+              <li>Prazo informado no momento do pedido</li>
+              <li>Postagem em até 24–48h úteis após confirmação</li>
+              <li>Envio pode variar por região</li>
+            </ul>
+          </article>
+
+          <article class="card policy">
+            <h3>Trocas e devoluções</h3>
+            <ul class="list">
+              <li>Troca por defeito: solicite em até 7 dias após recebimento</li>
+              <li>Produto deve estar sem uso e com embalagem</li>
+              <li>Entre em contato pelo WhatsApp para orientações</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="disclaimer">
+          <p class="muted">
+            <strong>Aviso:</strong> não fazemos promessas irreais (ex: “cura”, “milagre”, “resultado garantido”).
+            Isso também evita reprovação de anúncios.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <div class="brand__name">Adriele Makes</div>
+        <div class="muted">© <span id="year"></span> • Todos os direitos reservados</div>
+      </div>
+
+      <div class="footer__links">
+        <a href="#politicas">Privacidade</a>
+        <a href="#politicas">Entrega</a>
+        <a href="#politicas">Trocas</a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="fab" id="fabWhats" aria-label="Abrir WhatsApp">💬</button>
+
+  <div class="backdrop" id="backdrop" hidden></div>
+  <aside class="drawer" id="cartDrawer" aria-label="Carrinho" role="dialog" aria-modal="true" hidden>
+    <div class="drawer__head">
+      <div>
+        <h3>Carrinho</h3>
+        <div class="muted" id="cartSub">0 itens</div>
+      </div>
+      <button class="iconBtn" id="btnCloseCart" aria-label="Fechar">✕</button>
+    </div>
+
+    <div class="drawer__content" id="cartItems"></div>
+
+    <div class="drawer__foot">
+      <div class="totals">
+        <div class="totals__row">
+          <span>Subtotal</span>
+          <strong id="cartTotal">R$ 0,00</strong>
+        </div>
+        <div class="muted small">Frete calculado no WhatsApp.</div>
+      </div>
+
+      <button class="btn btn--primary btn--full" id="btnCheckout">Finalizar no WhatsApp ✅</button>
+      <button class="btn btn--ghost btn--full" id="btnClear">Limpar carrinho</button>
+    </div>
+  </aside>
+
+  <script>
+    // ============================
+    // CONFIG (edite aqui)
+    // ============================
+    const STORE = {
+      name: "Adriele Makes",
+      whatsappNumberE164: "5598985356804", // <<< Troque pelo número certo (55 + DDD + número)
+      whatsappDisplay: "+55 (98) 98535-6804", // só visual
+      currency: "BRL",
+      accentTag: "Destaque",
+      disclaimer: "Frete calculado no WhatsApp. Prazos variam por região."
+    };
+
+    const PRODUCTS = [
+      { id:"kit-glow", name:"Kit Glow Completo", desc:"Base + corretivo + blush + gloss. Look leve e iluminado.", category:"kits", price:149.90, oldPrice:199.90, icon:"✨", badge:"hot" },
+      { id:"kit-olhar", name:"Kit Olhar Marcante", desc:"Máscara + delineador + sombra. Para olhar poderoso.", category:"kits", price:119.90, oldPrice:159.90, icon:"👁️", badge:"hot" },
+      { id:"kit-boca", name:"Kit Boca Perfeita", desc:"Gloss + batom + lápis contorno. Conforto e definição.", category:"kits", price:89.90, oldPrice:119.90, icon:"💋", badge:"hot" },
+      { id:"base-velvet", name:"Base Velvet (Alta Cobertura)", desc:"Acabamento aveludado e confortável (exemplo).", category:"pele", price:59.90, oldPrice:79.90, icon:"🧴", badge:"" },
+      { id:"corretivo-fresh", name:"Corretivo Fresh", desc:"Cobertura natural para olheiras e imperfeições (exemplo).", category:"pele", price:29.90, oldPrice:39.90, icon:"🫧", badge:"" },
+      { id:"blush-sun", name:"Blush Sun (Efeito Saúde)", desc:"Fácil de esfumar e pigmentação na medida (exemplo).", category:"pele", price:34.90, oldPrice:44.90, icon:"🌸", badge:"" },
+      { id:"mascara-volume", name:"Máscara Volume", desc:"Mais volume sem empelotar (exemplo).", category:"olhos", price:39.90, oldPrice:49.90, icon:"👁️‍🗨️", badge:"" },
+      { id:"delineador-black", name:"Delineador Black", desc:"Traço preciso e secagem rápida (exemplo).", category:"olhos", price:24.90, oldPrice:34.90, icon:"🖊️", badge:"" },
+      { id:"gloss-glow", name:"Gloss Glow", desc:"Brilho lindo sem grudar (exemplo).", category:"boca", price:22.90, oldPrice:29.90, icon:"💎", badge:"" },
+      { id:"batom-matte", name:"Batom Matte", desc:"Confortável e durável (exemplo).", category:"boca", price:27.90, oldPrice:35.90, icon:"💄", badge:"" },
+      { id:"pincel-kit", name:"Kit de Pincéis (5 un.)", desc:"Essenciais para aplicação impecável (exemplo).", category:"acessorios", price:49.90, oldPrice:69.90, icon:"🖌️", badge:"" }
+    ];
+
+    // ============================
+    // Helpers
+    // ============================
+    const byId = (id) => document.getElementById(id);
+    const money = (value) => value.toLocaleString("pt-BR", { style:"currency", currency: STORE.currency });
+
+    const loadCart = () => {
+      try { return JSON.parse(localStorage.getItem("adriele_cart") || "{}"); }
+      catch { return {}; }
+    };
+    const saveCart = (cart) => localStorage.setItem("adriele_cart", JSON.stringify(cart));
+
+    const cartCount = (cart) => Object.values(cart).reduce((a,b)=>a+b,0);
+    const cartSubtotal = (cart) =>
+      Object.entries(cart).reduce((sum,[id,qty])=>{
+        const p = PRODUCTS.find(x=>x.id===id);
+        return sum + (p ? p.price * qty : 0);
+      },0);
+
+    // ============================
+    // Render Products
+    // ============================
+    function renderProducts(list){
+      const grid = byId("productGrid");
+      grid.innerHTML = "";
+
+      if(!list.length){
+        grid.innerHTML = `<div class="card product" style="grid-column:1/-1">
+          <strong>Nenhum produto encontrado.</strong>
+          <p class="muted">Tente outro termo ou selecione outra categoria.</p>
+        </div>`;
+        return;
+      }
+
+      for(const p of list){
+        const el = document.createElement("article");
+        el.className = "card product";
+        el.innerHTML = `
+          <div class="product__top">
+            <div>
+              <h3 class="product__title">${p.icon} ${p.name}</h3>
+              <div class="muted small">${p.category.toUpperCase()}</div>
+            </div>
+            <span class="tag ${p.badge==="hot" ? "hot" : ""}">${p.badge==="hot" ? "Promo" : STORE.accentTag}</span>
+          </div>
+          <p class="product__desc">${p.desc}</p>
+          <div class="product__bottom">
+            <div class="product__price">
+              ${p.oldPrice ? `<div class="priceOld">${money(p.oldPrice)}</div>` : ``}
+              <div class="price">${money(p.price)}</div>
+            </div>
+            <button class="btn btn--primary" data-add="${p.id}">Adicionar 🛒</button>
+          </div>
+        `;
+        grid.appendChild(el);
+      }
+    }
+
+    function applyFilters(){
+      const q = (byId("search").value || "").trim().toLowerCase();
+      const cat = byId("category").value;
+      const sort = byId("sort").value;
+
+      let list = [...PRODUCTS];
+
+      if(cat !== "all") list = list.filter(p => p.category === cat);
+      if(q) list = list.filter(p => (p.name + " " + p.desc).toLowerCase().includes(q));
+
+      if(sort === "low") list.sort((a,b)=>a.price-b.price);
+      if(sort === "high") list.sort((a,b)=>b.price-a.price);
+      if(sort === "name") list.sort((a,b)=>a.name.localeCompare(b.name,"pt-BR"));
+
+      renderProducts(list);
+    }
+
+    // ============================
+    // Cart
+    // ============================
+    let CART = loadCart();
+
+    function updateCartUI(){
+      const count = cartCount(CART);
+      byId("cartCount").textContent = String(count);
+      byId("cartSub").textContent = `${count} item(ns)`;
+      byId("cartTotal").textContent = money(cartSubtotal(CART));
+
+      const wrap = byId("cartItems");
+      wrap.innerHTML = "";
+
+      const entries = Object.entries(CART);
+      if(!entries.length){
+        wrap.innerHTML = `
+          <div class="card" style="padding:14px;">
+            <strong>Seu carrinho está vazio.</strong>
+            <p class="muted">Adicione produtos para finalizar no WhatsApp.</p>
+          </div>
+        `;
+        return;
+      }
+
+      for(const [id, qty] of entries){
+        const p = PRODUCTS.find(x => x.id === id);
+        if(!p) continue;
+
+        const row = document.createElement("div");
+        row.className = "cartItem";
+        row.innerHTML = `
+          <div class="cartItem__icon">${p.icon}</div>
+          <div class="cartItem__body">
+            <div class="cartItem__title">${p.name}</div>
+            <div class="cartItem__meta">${money(p.price)} • ${p.category}</div>
+            <div class="qty">
+              <button data-dec="${p.id}" aria-label="Diminuir">−</button>
+              <span>${qty}</span>
+              <button data-inc="${p.id}" aria-label="Aumentar">+</button>
+            </div>
+          </div>
+          <button class="iconBtn" data-rm="${p.id}" aria-label="Remover">🗑️</button>
+        `;
+        wrap.appendChild(row);
+      }
+    }
+
+    function addToCart(id){
+      CART[id] = (CART[id] || 0) + 1;
+      saveCart(CART);
+      updateCartUI();
+    }
+    function inc(id){ CART[id] = (CART[id] || 0) + 1; saveCart(CART); updateCartUI(); }
+    function dec(id){
+      if(!CART[id]) return;
+      CART[id] -= 1;
+      if(CART[id] <= 0) delete CART[id];
+      saveCart(CART);
+      updateCartUI();
+    }
+    function rm(id){ delete CART[id]; saveCart(CART); updateCartUI(); }
+    function clearCart(){ CART = {}; saveCart(CART); updateCartUI(); }
+
+    function openCart(){
+      byId("cartDrawer").hidden = false;
+      byId("backdrop").hidden = false;
+      document.body.style.overflow = "hidden";
+    }
+    function closeCart(){
+      byId("cartDrawer").hidden = true;
+      byId("backdrop").hidden = true;
+      document.body.style.overflow = "";
+    }
+
+    // ============================
+    // WhatsApp
+    // ============================
+    function buildCheckoutMessage(){
+      const items = Object.entries(CART)
+        .map(([id, qty]) => {
+          const p = PRODUCTS.find(x => x.id === id);
+          if(!p) return null;
+          return `• ${qty}x ${p.name} — ${money(p.price * qty)}`;
+        })
+        .filter(Boolean);
+
+      const total = money(cartSubtotal(CART));
+      const header = `Olá! Quero finalizar um pedido na *${STORE.name}* 😊`;
+      const body = items.length ? `\n\n*Itens:*\n${items.join("\n")}` : `\n\n(sem itens no carrinho)`;
+      const tail = `\n\n*Subtotal:* ${total}\n*Obs:* ${STORE.disclaimer}\n\nPode me informar o valor do frete e as formas de pagamento?`;
+      return header + body + tail;
+    }
+
+    function openWhatsApp(customText){
+      const text = encodeURIComponent(customText || buildCheckoutMessage());
+      const url = `https://wa.me/${STORE.whatsappNumberE164}?text=${text}`;
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
+
+    // ============================
+    // Events
+    // ============================
+    document.addEventListener("click", (e) => {
+      const add = e.target.closest("[data-add]");
+      const incBtn = e.target.closest("[data-inc]");
+      const decBtn = e.target.closest("[data-dec]");
+      const rmBtn = e.target.closest("[data-rm]");
+
+      if(add){
+        addToCart(add.getAttribute("data-add"));
+        openCart();
+      }
+      if(incBtn) inc(incBtn.getAttribute("data-inc"));
+      if(decBtn) dec(decBtn.getAttribute("data-dec"));
+      if(rmBtn) rm(rmBtn.getAttribute("data-rm"));
+    });
+
+    byId("btnOpenCart").addEventListener("click", openCart);
+    byId("btnCloseCart").addEventListener("click", closeCart);
+    byId("backdrop").addEventListener("click", closeCart);
+
+    byId("btnCheckout").addEventListener("click", () => {
+      if(cartCount(CART) === 0){
+        openWhatsApp(`Olá! Quero informações sobre produtos na *${STORE.name}* 😊`);
+        return;
+      }
+      openWhatsApp(buildCheckoutMessage());
+    });
+
+    byId("btnClear").addEventListener("click", clearCart);
+
+    byId("btnTalk").addEventListener("click", () => {
+      openWhatsApp(`Olá! Vim pelo site da *${STORE.name}* e queria tirar uma dúvida 😊`);
+    });
+    byId("btnTalk2").addEventListener("click", () => {
+      openWhatsApp(`Olá! Vim pelo site da *${STORE.name}* e queria tirar uma dúvida 😊`);
+    });
+    byId("fabWhats").addEventListener("click", () => {
+      openWhatsApp(`Olá! Vim pelo site da *${STORE.name}* 😊`);
+    });
+
+    byId("search").addEventListener("input", applyFilters);
+    byId("category").addEventListener("change", applyFilters);
+    byId("sort").addEventListener("change", applyFilters);
+
+    // Init
+    byId("year").textContent = String(new Date().getFullYear());
+    byId("phoneText").textContent = STORE.whatsappDisplay;
+    applyFilters();
+    updateCartUI();
+  </script>
+</body>
+</html>
